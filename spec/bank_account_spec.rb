@@ -6,8 +6,6 @@ describe 'BankAccount' do
 
 	before {@my_bank_account = BankAccount.new}
 
-
-
 	specify 'I can deposit 1 AUD' do
 		amount = Amount.new(1)
 		expect(@my_bank_account.deposit(amount)).to eq amount
@@ -23,4 +21,5 @@ describe 'BankAccount' do
 		@my_bank_account.deposit(amount)		
 		expect(@my_bank_account.deposit(amount)).to eq Amount.new(2)
 	end
+	
 end
