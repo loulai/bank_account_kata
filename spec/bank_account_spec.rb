@@ -18,9 +18,9 @@ describe 'BankAccount' do
 	 	expect(@my_bank_account.deposit(amount)).to eq amount
 	end
 
-	it "should return total balance if i de deposit twice" do
+	it "should return total balance if I deposit twice" do
 		amount = Amount.new(1)
-		@my_bank_account.deposit(1)		
-		expect(@my_bank_account.deposit(1)).to eq 
+		@my_bank_account.deposit(amount)		
+		expect(@my_bank_account.deposit(amount)).to eq Amount.new(2)
 	end
 end
